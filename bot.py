@@ -3,8 +3,6 @@ import os
 from slack import WebClient
 from slack.errors import SlackApiError
 import GetOldTweets3 as got
-import datetime
-
 
 if __name__ == "__main__":
  slack_token = os.environ["SLACK_BOT_TOKEN"]
