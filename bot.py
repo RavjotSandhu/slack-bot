@@ -12,13 +12,12 @@ if __name__ == "__main__":
 
  tweetCriteria = got.manager.TweetCriteria().setUsername("elonmusk")\
                                            .setMaxTweets(10)
-tweet = got.manager.TweetManager.getTweets(tweetCriteria)[0]
+ tweet = got.manager.TweetManager.getTweets(tweetCriteria)[0]
 
  try:
   response = client.chat_postMessage(
     channel="#random",
     text=tweet.text
-    text= tweet.date 
    )
  except SlackApiError as e:
   assert e.response["error"]  # str like 'invalid_auth', 'channel_not_found'
